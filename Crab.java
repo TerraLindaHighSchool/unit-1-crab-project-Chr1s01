@@ -55,6 +55,14 @@ public class Crab extends Actor
             Greenfoot.playSound("slurp.wav");
         }
         
+        {
+        if(isTouching(Lobster.class))
+        {
+            Greenfoot.playSound("au.wav");
+            Greenfoot.stop();
+        }
+    }
+
     }
 
 }
