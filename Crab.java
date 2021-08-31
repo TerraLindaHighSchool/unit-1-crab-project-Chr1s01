@@ -10,10 +10,10 @@ public class Crab extends Actor
 {
     public void act()
     {
-        //  move();
-         turnAtEdge();
-         checkKeyPress();
-         onCollision();
+        move(3);
+        turnAtEdge();
+        checkKeyPress();
+        onCollision();
     }
 
 
@@ -22,7 +22,10 @@ public class Crab extends Actor
     // Turns the crab at the edge
     private void turnAtEdge()
     {
-        
+        if(isAtEdge())
+        {
+            turn(50);
+        }
     }
     
     // Checks for user key presses so user can turn the Crab
@@ -35,9 +38,12 @@ public class Crab extends Actor
         
         if(Greenfoot.isKeyDown("left"))
         {
-            turn(-4);
+            turn(-4);}
+            
+        if(Greenfoot.isKeyDown("up"))
+        {
+            Greenfoot.delay(60);
         }
-        
     }
     
     // Check for collisions with other objects
