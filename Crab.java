@@ -10,7 +10,7 @@ public class Crab extends Actor
 {
     public void act()
     {
-        move(3);
+        move(2);
         turnAtEdge();
         checkKeyPress();
         onCollision();
