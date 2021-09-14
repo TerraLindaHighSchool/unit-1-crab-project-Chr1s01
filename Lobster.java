@@ -10,7 +10,7 @@ public class Lobster extends Actor
 {
     public void act()
     {
-        move(3);
+        move(2);
         turnAtEdge();
     }
 
@@ -22,7 +22,7 @@ public class Lobster extends Actor
     {
         if(isAtEdge())
         {
-            turn(50);
+            turn(Greenfoot.getRandomNumber(360));
         }
     }
 }

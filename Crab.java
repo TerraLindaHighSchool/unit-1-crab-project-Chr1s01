@@ -3,14 +3,13 @@ import greenfoot.*;
 /**
  * This class defines a crab. Crabs live on the beach.
  *@author Chr1s01
- *@version 8/25/2020
+ *@version 9/14/2020
  
  */
 public class Crab extends Actor
 {
     public void act()
     {
-        move(2);
         turnAtEdge();
         checkKeyPress();
         onCollision();
@@ -33,16 +32,21 @@ public class Crab extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            turn(4);
+            setLocation(getX()+3, getY());
         }
         
         if(Greenfoot.isKeyDown("left"))
         {
-            turn(-4);}
+            setLocation(getX()-3, getY());
+        }
             
         if(Greenfoot.isKeyDown("up"))
         {
-            Greenfoot.delay(60);
+            setLocation(getX(), getY()-3);
+        }
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY()+3);
         }
     }
     
@@ -52,7 +56,7 @@ public class Crab extends Actor
         if(isTouching(Worm.class))
         {
             removeTouching(Worm.class);
-            Greenfoot.playSound("slurp.wav");
+            Greenfoot.playSound("scimmia2.wav");
             //Winning the game
         if(getWorld().getObjects(Worm.class).size() == 0)
         {
