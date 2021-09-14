@@ -71,5 +71,6 @@ public class CrabWorld extends World
         lobster.setLocation(516,406);
         lobster3.setLocation(89,356);
         worm10.setLocation(123,484);
+        lobster2.setLocation(356,63);
     }
 }
